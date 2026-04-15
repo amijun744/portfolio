@@ -3,71 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Elite Portfolio</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navbar -->
-    <header>
-        <nav>
-            <h2 class="logo">MyPortfolio</h2>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button id="themeToggle">🌙</button>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <h2 class="logo">⚡ Amir</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="themeToggle">🌙</button>
+    </nav>
+</header>
 
-    <!-- Hero -->
-    <section id="home" class="hero">
-        <h1>Hello, I'm <span>Your Name</span></h1>
-        <p>A Web Developer</p>
-        <button onclick="scrollToSection('projects')">View My Work</button>
-    </section>
+<!-- HERO -->
+<section id="home" class="hero">
+    <h1>I am <span id="typing"></span></h1>
+    <p>Building futuristic Web3 experiences</p>
+    <button onclick="scrollToSection('projects')">Explore Work</button>
+</section>
 
-    <!-- About -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I build clean, modern, and interactive web experiences.</p>
-    </section>
+<!-- ABOUT -->
+<section id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>
+        I design and build high-performance, visually stunning web apps with a focus on Web3, automation, and scalable systems.
+    </p>
+</section>
 
-    <!-- Projects -->
-    <section id="projects" class="projects">
-        <h2>Projects</h2>
+<!-- PROJECTS -->
+<section id="projects" class="projects">
+    <h2 data-aos="fade-up">Projects</h2>
 
-        <div class="project-card">
-            <h3>Project One</h3>
-            <p>Short description.</p>
-        </div>
+    <div class="project-card" data-aos="zoom-in">
+        <h3>🚀 DeFi Dashboard</h3>
+        <p>Advanced analytics dashboard for decentralized finance.</p>
+    </div>
 
-        <div class="project-card">
-            <h3>Project Two</h3>
-            <p>Short description.</p>
-        </div>
+    <div class="project-card" data-aos="zoom-in">
+        <h3>🔐 Identity Protocol</h3>
+        <p>Secure on-chain identity verification system.</p>
+    </div>
 
-        <div class="project-card">
-            <h3>Project Three</h3>
-            <p>Short description.</p>
-        </div>
+    <div class="project-card" data-aos="zoom-in">
+        <h3>⚡ Automation Engine</h3>
+        <p>Smart contract-driven automation workflows.</p>
+    </div>
 
-    </section>
+</section>
 
-    <!-- Contact -->
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <form id="contactForm">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-        <p id="formMessage"></p>
-    </section>
+<!-- CONTACT -->
+<section id="contact" class="contact" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+    <p id="formMessage"></p>
+</section>
 
-    <script src="script.js"></script>
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
