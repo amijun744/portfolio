@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* Navbar */
+header {
+    background: #111;
+    color: #fff;
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+}
+
+.hero span {
+    color: yellow;
+}
+
+.hero button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Projects */
+.projects {
+    background: #f4f4f4;
+}
+
+.project-card {
+    background: white;
+    margin: 15px auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* Contact */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+
+.contact input, .contact textarea {
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.contact button {
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+}
