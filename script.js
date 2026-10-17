@@ -1,58 +1,70 @@
-// AOS Init
-AOS.init();
 
-// Smooth scroll
-function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+"use strict";
+
+// Mobile navigation menu
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+const navigationLinks = document.querySelectorAll("#nav-links a");
+
+function closeMenu() {
+  navLinks.classList.remove("open");
+  menuToggle.setAttribute("aria-expanded", "false");
+  menuToggle.setAttribute("aria-label", "Open navigation menu");
+  menuToggle.textContent = "☰";
 }
 
-// Typing Effect
-const text = ["Amir ⚡", "a Web3 Developer", "a Builder"];
-let i = 0, j = 0, current = "", isDeleting = false;
+menuToggle.addEventListener("click", () => {
+  const isOpen = navLinks.classList.toggle("open");
 
-function type() {
-    current = text[i];
-    
-    if (!isDeleting) {
-        document.getElementById("typing").textContent = current.substring(0, j++);
-        if (j > current.length) {
-            isDeleting = true;
-            setTimeout(type, 1000);
-            return;
-        }
-    } else {
-        document.getElementById("typing").textContent = current.substring(0, j--);
-        if (j === 0) {
-            isDeleting = false;
-            i = (i + 1) % text.length;
-        }
-    }
-    setTimeout(type, isDeleting ? 50 : 100);
-}
-type();
-
-// Contact Form
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    document.getElementById("formMessage").innerText = "✅ Message sent!";
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.setAttribute(
+    "aria-label",
+    isOpen ? "Close navigation menu" : "Open navigation menu"
+  );
+  menuToggle.textContent = isOpen ? "✕" : "☰";
 });
 
-// Theme Toggle
-const toggleBtn = document.getElementById("themeToggle");
+// Close the mobile menu after a navigation link is clicked
+navigationLinks.forEach((link) => {
+  link.addEventListener("click", closeMenu);
+});
 
-if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark");
-    toggleBtn.textContent = "☀️";
+// Close the menu when the user presses Escape
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeMenu();
+  }
+});
+
+// Automatically update the footer year
+const yearElement = document.getElementById("year");
+
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
 }
 
-toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
+// Highlight the navigation link for the current section
+const sections = document.querySelectorAll("main section[id]");
 
-    if (document.body.classList.contains("dark")) {
-        localStorage.setItem("theme", "dark");
-        toggleBtn.textContent = "☀️";
-    } else {
-        localStorage.setItem("theme", "light");
-        toggleBtn.textContent = "🌙";
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        navigationLinks.forEach((link) => {
+          const isCurrent =
+            link.getAttribute("href") === `#${entry.target.id}`;
+
+          link.classList.toggle("active", isCurrent);
+        });
+      });
+    },
+    {
+      rootMargin: "-30% 0px -60% 0px",
+      threshold: 0
     }
-});
+  );
+
+  sections.forEach((section) => observer.observe(section));
+}

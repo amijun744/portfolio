@@ -1,82 +1,358 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elite Portfolio</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Amir Kemal's portfolio in AI training, data annotation, prompt engineering, and web development.">
+  <title>Amir Kemal | AI & Web Developer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <header class="header">
+    <nav class="navbar container">
+      <a href="#home" class="logo">AK<span>.</span></a>
 
-<header>
-    <nav>
-        <h2 class="logo">⚡ Amir</h2>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button id="themeToggle">🌙</button>
+      <button class="menu-toggle" id="menu-toggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false" aria-controls="nav-links">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact" class="nav-cta">Contact Me</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<!-- HERO -->
-<section id="home" class="hero">
-    <h1>I am <span id="typing"></span></h1>
-    <p>Building futuristic Web3 experiences</p>
-    <button onclick="scrollToSection('projects')">Explore Work</button>
-</section>
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-content">
+        <p class="eyebrow"><span class="status-dot"></span>
+          OPEN TO OPPORTUNITIES
+        </p>
 
-<!-- ABOUT -->
-<section id="about" data-aos="fade-up">
-    <h2>About Me</h2>
-    <p>
-        I design and build high-performance, visually stunning web apps with a focus on Web3, automation, and scalable systems.
-    </p>
-</section>
+        <h1>Hi, I'm <span class="gradient-text">Amir Kemal</span></h1>
 
-<!-- PROJECTS -->
-<section id="projects" class="projects">
-    <h2 data-aos="fade-up">Projects</h2>
+        <h2>AI Trainer & Data Annotator<br>
+          <span class="muted">Web Developer</span>
+        </h2>
 
-    <div class="project-card" data-aos="zoom-in">
-        <h3>🚀 DeFi Dashboard</h3>
-        <p>Advanced analytics dashboard for decentralized finance.</p>
+        <p class="hero-description">
+          I combine computer science, prompt engineering, and web development
+          to help build smarter AI systems and useful digital experiences.
+          I'm eager to contribute to AI training, data annotation, and
+          software development projects.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="button button-primary">Explore My Work ↗</a>
+          <a href="#contact" class="button button-secondary">Get In Touch</a>
+        </div>
+
+        <div class="quick-info">
+          <span>📍 Ethiopia</span>
+          <span>🎓 Computer Science Graduate</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="terminal-top">
+          <span></span><span></span><span></span>
+          <p>amir_kemal.js</p>
+        </div>
+        <div class="terminal-code">
+          <p><span class="code-purple">const</span> developer = {</p>
+          <p class="indent"><span class="code-blue">name</span>: <span class="code-green">"Amir Kemal"</span>,</p>
+          <p class="indent"><span class="code-blue">focus</span>: [</p>
+          <p class="indent2"><span class="code-green">"AI Training"</span>,</p>
+          <p class="indent2"><span class="code-green">"Data Annotation"</span>,</p>
+          <p class="indent2"><span class="code-green">"Web Development"</span></p>
+          <p class="indent">],</p>
+          <p class="indent"><span class="code-blue">mindset</span>: <span class="code-green">"Always learning"</span>,</p>
+          <p class="indent"><span class="code-blue">readyToWork</span>: <span class="code-orange">true</span></p>
+          <p>};</p>
+          <p class="terminal-comment">// Turning ideas into solutions.</p>
+          <p class="terminal-cursor">▌</p>
+        </div>
+        <div class="terminal-footer">
+          <span>● Available for opportunities</span>
+          <span>UTF-8</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">GET TO KNOW ME</p>
+        <h2>About <span class="gradient-text">Me</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-copy">
+          <h3>Curious mind. Technical skills. Continuous growth.</h3>
+          <p>
+            I'm a Computer Science graduate from Wolkite University with
+            an interest in artificial intelligence, data quality, and
+            building web applications.
+          </p>
+          <p>
+            My background includes prompt engineering, programming,
+            debugging, and analytical problem-solving. I enjoy learning
+            new technologies, following clear guidelines, and producing
+            accurate, reliable work.
+          </p>
+          <p>
+            I'm interested in remote opportunities involving AI model
+            evaluation, data labeling, annotation, prompt writing, and
+            front-end or full-stack web development.
+          </p>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card">
+            <span class="stat-number">3.42</span>
+            <span class="stat-label">GPA / 4.00</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-number">75/100</span>
+            <span class="stat-label">Exit Exam Score</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Languages</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-number">AI + Web</span>
+            <span class="stat-label">Core Interests</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">WHAT I BRING</p>
+          <h2>My <span class="gradient-text">Skills</span></h2>
+          <p class="section-description">
+            Skills and tools I can apply to technical and AI-related work.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <div class="skill-icon">✦</div>
+            <h3>AI & Data</h3>
+            <div class="tag-list">
+              <span>AI Training</span>
+              <span>Data Annotation</span>
+              <span>Prompt Engineering</span>
+              <span>AI Evaluation</span>
+              <span>Data Quality</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">⌘</div>
+            <h3>Web Development</h3>
+            <div class="tag-list">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>React</span>
+              <span>Node.js</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">▤</div>
+            <h3>Databases & Tools</h3>
+            <div class="tag-list">
+              <span>MySQL</span>
+              <span>MongoDB</span>
+              <span>Debugging</span>
+              <span>After Effects</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">◎</div>
+            <h3>Professional Skills</h3>
+            <div class="tag-list">
+              <span>Critical Thinking</span>
+              <span>Problem Solving</span>
+              <span>Communication</span>
+              <span>Teamwork</span>
+              <span>Attention to Detail</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">SELECTED WORK & INTERESTS</p>
+        <h2>Projects & <span class="gradient-text">Focus Areas</span></h2>
+        <p class="section-description">
+          Areas where I apply my technical skills and continue building
+          practical experience.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-number">01 / AI</div>
+          <h3>AI Training & Data Annotation</h3>
+          <p>
+            Focused on accurate labeling, reviewing AI-generated outputs,
+            following annotation guidelines, and supporting high-quality
+            training data.
+          </p>
+          <div class="tag-list">
+            <span>Data Quality</span>
+            <span>Evaluation</span>
+            <span>Accuracy</span>
+          </div>
+          <span class="project-note">Professional focus area</span>
+        </article>
+
+        <article class="project-card">
+          <div class="project-number">02 / WEB</div>
+          <h3>Personal Portfolio Website</h3>
+          <p>
+            A responsive personal website built with HTML, CSS, and
+            JavaScript to present my skills, education, and professional
+            interests.
+          </p>
+          <div class="tag-list">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+          <span class="project-note">Portfolio project</span>
+        </article>
+
+        <article class="project-card">
+          <div class="project-number">03 / PROMPT</div>
+          <h3>Prompt Engineering</h3>
+          <p>
+            Exploring prompt design, clear instructions, structured
+            outputs, and ways to improve the usefulness and consistency
+            of AI responses.
+          </p>
+          <div class="tag-list">
+            <span>LLMs</span>
+            <span>Prompt Design</span>
+            <span>Testing</span>
+          </div>
+          <span class="project-note">Skill development area</span>
+        </article>
+      </div>
+      <p class="projects-disclaimer">
+        Note: These cards describe professional focus areas. Add links to
+        your actual completed projects as you publish them.
+      </p>
+    </section>
+
+    <section class="section section-alt" id="education">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">MY BACKGROUND</p>
+          <h2>Education & <span class="gradient-text">Certification</span></h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2022 — 2025</span>
+              <h3>Bachelor of Science in Computer Science</h3>
+              <p class="institution">Wolkite University</p>
+              <p>
+                Graduated with a GPA of 3.42/4.00 and an exit exam score
+                of 75/100.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Professional Certification</span>
+              <h3>Prompt Engineering</h3>
+              <p class="institution">Zero to Mastery</p>
+              <p>
+                Training in prompt engineering and communicating effectively
+                with AI systems.
+              </p>
+              <a class="text-link"
+                 href="https://www.prompten.xyz/verify/PE-00LEZUQK"
+                 target="_blank" rel="noopener noreferrer">
+                Verify certificate ↗
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="languages">
+          <h3>Languages</h3>
+          <div class="language-row">
+            <span>Amharic</span><span class="language-level">Native</span>
+          </div>
+          <div class="language-row">
+            <span>English</span><span class="language-level">Fluent</span>
+          </div>
+          <div class="language-row">
+            <span>Arabic</span><span class="language-level">Advanced</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="contact">
+      <div class="contact-panel">
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h2>Have an opportunity?<br>
+          <span class="gradient-text">Let's talk.</span>
+        </h2>
+        <p>
+          I'm interested in AI training, data annotation, prompt engineering,
+          and web development opportunities. Feel free to reach out.
+        </p>
+
+        <div class="contact-actions">
+          <a class="button button-primary"
+             href="mailto:kemalumer993@gmail.com">
+            ✉ Email Me
+          </a>
+          <a class="button button-secondary"
+             href="https://github.com/amijun744"
+             target="_blank" rel="noopener noreferrer">
+            GitHub ↗
+          </a>
+        </div>
+
+        <a class="email-address" href="mailto:kemalumer993@gmail.com">
+          kemalumer993@gmail.com
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="#home" class="logo">AK<span>.</span></a>
+      <p>Designed and built by Amir Kemal.</p>
+      <p>© <span id="year"></span> All rights reserved.</p>
     </div>
-
-    <div class="project-card" data-aos="zoom-in">
-        <h3>🔐 Identity Protocol</h3>
-        <p>Secure on-chain identity verification system.</p>
-    </div>
-
-    <div class="project-card" data-aos="zoom-in">
-        <h3>⚡ Automation Engine</h3>
-        <p>Smart contract-driven automation workflows.</p>
-    </div>
-
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact" data-aos="fade-up">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-    </form>
-    <p id="formMessage"></p>
-</section>
-
-<!-- Scripts -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script src="script.js"></script>
-
+  </footer>
 </body>
 </html>
